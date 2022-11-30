@@ -23,7 +23,7 @@ class ChangePasswordService
     }
 
     public function changePassword($request) {
-        $conn = $this->connect_service->connectDataBase($request);
+        $conn = $this->connect_service->connectDataBase();
         $user = $this->user_repository->querySelectUser($conn, $request);
         if(!isset($user->user_email))
         {

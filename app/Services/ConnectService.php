@@ -7,7 +7,7 @@ use PDOException;
 
 class ConnectService
 {
-    public function connectDataBase($request)
+    public function connectDataBase()
     {
         try {
             $mysql_host = \config('credentials.mysql_host');
